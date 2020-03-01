@@ -62,7 +62,7 @@ status ticTacToe::gameStatus(){
       cout <<"Player Won!" << endl;
       return WIN;
     }
-    else if(board[0][2] == board[1][1] && board[1][1] == board[0][2])
+    else if(board[0][2] == board[1][1] && board[1][1] == board[2][0])
     {
       displayBoard();
       cout <<"Player Won!" << endl;
@@ -118,13 +118,13 @@ status ticTacToe::gameStatus(){
     CountX = CountO = 0;
   }
 //if the move count = 9 and no winner was declared. It is a draw.
-if(noOfMoves == 9)
-{
-  displayBoard();
-  cout <<"This game is a draw!" << endl;
-  return DRAW;
-}
-  return CONTINUE;//if no one was declared a winner and there are moves left
+  if(noOfMoves == 9)
+  {
+    displayBoard();
+    cout <<"This game is a draw!" << endl;
+    return DRAW;
+  }
+return CONTINUE;//if no one was declared a winner and there are moves left
 }
 
 //the main function of the game

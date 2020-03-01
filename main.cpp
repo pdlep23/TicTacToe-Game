@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TicTacToe.h"
+
 int main() {
   ticTacToe game;//object of class ticTacToe
   char continuePlay = 'y';//do-while condition char
